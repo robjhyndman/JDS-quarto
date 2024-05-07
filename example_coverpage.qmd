@@ -1,0 +1,42 @@
+---
+title: My wonderful paper
+author:
+- name: Marie Curie
+  affiliations:
+    - name: University of Paris
+      department: Department of Radiation
+      address: Somewhere
+      city: Paris
+      country: France
+      postal-code: PX2039
+  email: mcurie.notreal@gmail.com
+  corresponding: true
+- name: Genghis Khan
+  affiliations:
+    - name: Monash University
+      department: Department of Econometrics & Business Statistics
+      city: Clayton VIC
+      country: Australia
+      postal-code: 3800
+- name: Monique Ash
+  email: Monique.Ash@monash.edu
+  affiliations:
+    - name: Monash University
+      department: Department of Econometrics & Business Statistics
+      city: Clayton VIC
+      country: Australia
+      postal-code: 3800
+shortauthor: Curie et al.
+keywords: nonsense, lorem ipsum, dolor sit amet
+format: jdscover-pdf
+anonymous: true
+---
+
+
+# Problem statement
+
+# Methods
+
+# Results
+
+# Significance

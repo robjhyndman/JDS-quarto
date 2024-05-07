@@ -1,0 +1,15 @@
+title: JDS submission
+author: Rob J Hyndman
+version: 0.0.1
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    pdf:
+      template: jds_template.tex
+      toc: false
+      pdf-engine: pdflatex
+      block-headings: false
+      format-resources:
+        - acmart.cls
+        - acm-jdslogo.png
+        - acm-ims-jds-logo.pdf

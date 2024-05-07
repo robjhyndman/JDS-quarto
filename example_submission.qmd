@@ -1,0 +1,9 @@
+---
+title: "My wonderful paper"
+abstract: "Blah blah"
+format: jds-pdf
+---
+
+# Introduction
+
+This is my wonderful paper. It is about wonderful things.

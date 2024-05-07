@@ -1,0 +1,30 @@
+\documentclass[acmcp,$if(anonymous)$anonymous,$endif$,pdftex]{acmart}
+\acmJournal{JDS}
+
+\begin{document}
+
+\title{\huge $title$}
+
+$for(by-author)$%
+  \author{$by-author.name.literal$}%
+  $if(by-author.email)$\email{$by-author.email$}$endif$%
+  $for(by-author.affiliations)$%
+    \affiliation{
+      $if(it.name)$\institution{$it.name$}$endif$%
+      $if(it.country)$\country{$it.country$}$endif$%
+    }
+  $endfor$%
+$endfor$%
+
+\renewcommand{\shortauthors}{$shortauthors$}
+\acmArticleType{Research}
+
+$if(keywords)$
+\keywords{{$keywords$}}
+$endif$
+
+\maketitle
+
+$body$
+
+\end{document}
