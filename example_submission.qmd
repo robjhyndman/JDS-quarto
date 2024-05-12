@@ -7,3 +7,61 @@ format: jds-pdf
 # Introduction
 
 This is my wonderful paper. It is about wonderful things.
+
+# Things that BREAK
+
+Things that BREAK without the pandoc partials... <https://quarto.org/docs/journals/templates.html#latex-partials>
+
+## tightlist
+
+Fixed by `$tightlist.tex()$`
+
+1.  **Data Collection:** discovering and obtaining datasets containing harmonisable data
+2.  **Source Specific Cleaning:** identifying and resolving issues specific to a data source and collection method
+3.  **Crossmap Transforms:** transforming each source dataset into a common measurement standard, including both the design or selection of mappings between source and target keys and the actual data manipulation.
+4.  **Data Merging:** merging each transformed data into a single analysis-ready dataset.
+
+## Table Placement
+
+- adding $tables.tex()$ fixed the longtable error
+- use `tbl-pos` to specific positioning
+
+```{r}
+#| label: tbl-iso-crosswalk
+#| tbl-cap: "Country code crosswalk"
+#| tbl-pos: H
+#| echo: false
+#| output: asis
+
+iso_codes <- tibble::tribble(
+  ~country, ~ISO2, ~ISO3, ~ISONumeric,
+  "Afghanistan", "AF", "AFG", "004",
+  "Andorra", "AD", "AND", "020"
+) |> as.data.frame()
+
+kableExtra::kbl(iso_codes)
+```
+
+## Algorithms
+
+- Added `\usepackage{algorithm2e}`
+
+\begin{algorithm}
+\caption{An algorithm with caption}\label{alg:two}
+\KwData{$n \geq 0$}
+\KwResult{$y = x^n$}
+$y \gets 1$\;
+$X \gets x$\;
+$N \gets n$\;
+\While{$N \neq 0$}{
+  \eIf{$N$ is even}{
+    $X \gets X \times X$\;
+    $N \gets \frac{N}{2}$;
+  }{\If{$N$ is odd}{
+      $y \gets y \times X$\;
+      $N \gets N - 1$\;
+    }
+  }
+}
+\end{algorithm}
+
