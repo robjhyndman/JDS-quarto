@@ -1,9 +1,10 @@
 ---
 title: "My wonderful paper"
 abstract: "Blah blah"
+bibliography: references.bib
 format: jds-pdf
 ---
 
 # Introduction
 
-This is my wonderful paper. It is about wonderful things.
+This is my wonderful paper. It is an extension of @NAGS86.

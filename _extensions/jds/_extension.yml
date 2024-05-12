@@ -8,8 +8,10 @@ contributes:
       template: jds_template.tex
       toc: false
       pdf-engine: pdflatex
+      cite-method: natbib
       block-headings: false
       format-resources:
         - acmart.cls
         - acm-jdslogo.png
         - acm-ims-jds-logo.pdf
+        - ACM-Reference-Format.bst
