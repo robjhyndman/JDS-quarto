@@ -2,6 +2,7 @@
 title: "My wonderful paper"
 abstract: "Blah blah"
 format: jds-pdf
+bibliography: references.bib
 ---
 
 # Introduction
@@ -65,3 +66,33 @@ $N \gets n$\;
 }
 \end{algorithm}
 
+## Code listings
+
+::: {#lst-stata-code}
+
+``` {.stata filename="group-occupations.do"}
+/*use "occupation.dta", clear*/
+/* merged data occupation*/
+/* professional, manager, teacher, assprofclerk, svcsales, armforces,
+xefe, farmer, craftrademach, labourer, driver, notclass */
+
+gen farmer=0
+replace farmer=1 if occupn>6000 & occupn<7000
+```
+
+Example STATA script for merging multiple occupations into larger groups
+:::
+
+Another example
+
+``` {#lst-sql-matvec .sql lst-cap="Query"}
+SELECT E.k as k, sum(E.w * S.x) as y
+```
+
+@lst-sql-matvec shows a query that does...
+
+## References
+
+This is an in-line citation with brackets [@wickhamTidyData2014].
+
+This is an in-line citation without brackets @wickhamTidyData2014
