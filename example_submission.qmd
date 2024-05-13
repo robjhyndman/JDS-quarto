@@ -1,8 +1,12 @@
 ---
 title: "My wonderful paper"
 abstract: "Blah blah"
-format: jds-pdf
 bibliography: references.bib
+format:
+  jds-pdf:
+    include-in-header:
+        - text: |
+            \newenvironment{codelisting}{\begin{figure}}{\end{figure}}
 ---
 
 # Introduction
@@ -71,6 +75,7 @@ $N \gets n$\;
 ::: {#lst-stata-code}
 
 ``` {.stata filename="group-occupations.do"}
+
 /*use "occupation.dta", clear*/
 /* merged data occupation*/
 /* professional, manager, teacher, assprofclerk, svcsales, armforces,
@@ -81,6 +86,7 @@ replace farmer=1 if occupn>6000 & occupn<7000
 ```
 
 Example STATA script for merging multiple occupations into larger groups
+
 :::
 
 Another example
@@ -92,6 +98,8 @@ SELECT E.k as k, sum(E.w * S.x) as y
 @lst-sql-matvec shows a query that does...
 
 ## References
+
+This is my wonderful paper. It is an extension of @NAGS86.
 
 This is an in-line citation with brackets [@wickhamTidyData2014].
 

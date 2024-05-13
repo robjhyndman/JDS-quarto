@@ -4,6 +4,15 @@ $tightlist.tex()$
 $tables.tex()$
 
 \usepackage{algorithm2e}
+\bibliographystyle{ACM-Reference-Format}
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
 
 \begin{document}
 \title{$title$}
@@ -13,5 +22,7 @@ $abstract$
 \maketitle
 
 $body$
+
+\bibliography{$bibliography$}
 
 \end{document}
