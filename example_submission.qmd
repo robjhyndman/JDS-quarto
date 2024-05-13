@@ -6,7 +6,7 @@ format:
   jds-pdf:
     include-in-header:
         - text: |
-            \newenvironment{codelisting}{\begin{figure}}{\end{figure}}
+            \usepackage[ruled]{algorithm2e}
 ---
 
 # Introduction
@@ -52,7 +52,7 @@ kableExtra::kbl(iso_codes)
 - Added `\usepackage{algorithm2e}`
 
 \begin{algorithm}
-\caption{An algorithm with caption}\label{alg:two}
+\caption{An algorithm with caption}\label{alg:example}
 \KwData{$n \geq 0$}
 \KwResult{$y = x^n$}
 $y \gets 1$\;
@@ -69,6 +69,10 @@ $N \gets n$\;
   }
 }
 \end{algorithm}
+
+Algorithm \ref{alg:example} is about...
+
+OR `\autoref{alg:example}`
 
 ## Code listings
 
@@ -100,6 +104,12 @@ SELECT E.k as k, sum(E.w * S.x) as y
 @lst-stata-code shows a query that does...
 
 @lst-stata-code does something else
+
+## Image Sizing
+
+- Use `$graphics.tex()`
+
+![The ACM/IMS logo](acm-ims-jds-logo.pdf)
 
 ## References
 
