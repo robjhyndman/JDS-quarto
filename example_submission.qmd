@@ -47,7 +47,7 @@ iso_codes <- tibble::tribble(
 kableExtra::kbl(iso_codes)
 ```
 
-## Algorithms
+## Algorithms{#sec-algorithm}
 
 - Added `\usepackage{algorithm2e}`
 
@@ -72,9 +72,11 @@ $N \gets n$\;
 
 ## Code listings
 
+In @sec-algorithm we talked about...
+
 ::: {#lst-stata-code}
 
-``` {.stata filename="group-occupations.do"}
+``` {.stata}
 
 /*use "occupation.dta", clear*/
 /* merged data occupation*/
@@ -95,7 +97,9 @@ Another example
 SELECT E.k as k, sum(E.w * S.x) as y
 ```
 
-@lst-sql-matvec shows a query that does...
+@lst-stata-code shows a query that does...
+
+@lst-stata-code does something else
 
 ## References
 
